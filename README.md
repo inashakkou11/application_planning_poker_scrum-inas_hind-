@@ -18,4 +18,4 @@ Ce travail a été fait donc par :
 
 ### Lancement du projet
 - Clonez ce dépôt : git clone https://github.com/inashakkou11/application_planning_poker_scrum-inas_hind-.git
-- Ouvrez index.html dans votre navigateur web.
+- Ouvrez index.html(Poker_scrum/app) dans votre navigateur web.
