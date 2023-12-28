@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style_creation_projet.css">
+    <link rel="shortcut icon" href="./assets/img/logo2.png">
+    <title>Create your game</title>
+</head>
+<body>
+    <form action="./bord_table_chef.html">
+        <div class="container">
+            <h2>Create your Game:</h2>
+            <label for="" class="vote-select">Type of Voting:</label>
+            <select class="voting_type" id="voting_type" required>
+                <option value=""></option>
+                <option value="strict">Strict</option>
+                <option value="moyenne">Moyenne</option>
+            </select>
+            <br>
+            <!-- --------------------------------------------- -->
+            <label for="">Sélectionnez un fichier JSON :</label>
+            <input type="file" id="jsonFile" name="jsonFile" accept=".json">
+            <!-- --------------------------------------------- -->
+            <br>
+            <label for="num_of_players">Nombre de joueurs :</label>
+            <input type="number" min="0" max="7" id="number_of_players" required>
+            <span onclick="createPlayerInputs()" class="button">Valider</span>
+            <div class="container_player">
+                <div id="players-container" class="box_"></div>
+                <button id="btn" class="btn" type="submit" onclick="initGame()" >Sauvgarder</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="./assets/js/models/classes.js"></script>
+    <script src="./assets/js/controllers/controler.js"></script>
+</body>
+</html>
+

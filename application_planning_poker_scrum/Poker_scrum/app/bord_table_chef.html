@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/style/style_bord_table_chef.css">
+    <link rel="shortcut icon" href="./assets/img/logo2.png">
+  </head>
+  <body onload="create_case_div()">
+    <!------------------------------------------------------------------------------>
+        <input type="checkbox" id="check">
+        <label for="check">
+          <i class="fas fa-bars" id="btn"></i>
+          <i class="fas fa-times" id="cancel"></i>
+        </label>
+        <div class="sidebar">
+            <header>Pocker Game</header>
+            <ul>
+                <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+                <li><a href="#"><i class="far fa-question-circle"></i>About</a></li>
+                <li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
+                <li><a href="#"><i class="fa fa-sign-out"></i>Log out</a></li>
+            </ul>
+        </div>
+        <!--affichage des div des cartes choisis et pseudo des joueurs------------------->
+        <div class="bord_table" id="bord_table">
+          <div class="tache_affichage" id="tache_affichage">
+            <p class="tache" id="tache"></p>
+          </div>
+          <div class="player_affichage" id="div_c">
+            <div class="p°1" id="p°1"></div>
+            <div class="p°2" id="p°2"></div>
+            <div class="p°3" id="p°3"></div>
+            <div class="p°4" id="p°4"></div>
+            <div class="p°5" id="p°5"></div>
+            <div class="p°6" id="p°6"></div>
+            <div class="p°7" id="p°7"></div>
+          </div>
+          <div class="cartes_affichage" id="div1">
+            <div class="n°1" id="n°1" value="1"></div>
+            <div class="n°2" id="n°2"></div>
+            <div class="n°3" id="n°3"></div>
+            <div class="n°5" id="n°5"></div>
+            <div class="n°8" id="n°8"></div>
+            <div class="n°13" id="n°13"></div>
+            <div class="n°20" id="n°20"></div>
+            <div class="n°40" id="n°40"></div>
+            <div class="n°100" id="n°100"></div>
+            <div class="n°DK" id="n°DK"></div>
+            <div class="n°coffee" id="n°coffee"></div>
+          </div>
+          <div class="down_bar">
+            <div class="validation" id="validation">Valider</div>
+            <div class="start_voting" id="start_voting"  onclick="game()">Start Voting</div>
+            <div class="result_button" id="result_button">Show Results</div>
+          </div>
+        </div>
+        <!--tableau d'affichage des resultats--------------------------------->
+        <table class="table_result" id="table_result">
+          <thead>
+             <tr>
+               <th>Task</th>
+               <th>Result</th>
+             </tr>
+          </thead>
+          <tbody id="table_body">
+          </tbody>
+        </table>
+        <div class="tableauContainer" id="tableauContainer">
+          <h1 class="voting_result">Voting results</h1>
+        </div>
+        <!--interface pour la pose coffee------------------------------------>
+        <div class="timer-container" id="timer-container">
+          <input type="number" min="0" id="hours" class="timer-input" placeholder="Enter hours">
+          <input type="number" min="0" id="minutes" class="timer-input" placeholder="Enter minutes">
+          <button id="start-timer" class="timer-button">Start Timer</button>
+          <div id="timer-display" class="timer-display"></div>
+        </div>
+        <div class="loader" id="loader">
+            <div class="container_coffee" id="container_coffee">
+              <div class="coffee-header">
+                <div class="coffee-header__buttons coffee-header__button-one"></div>
+                <div class="coffee-header__buttons coffee-header__button-two"></div>
+                <div class="coffee-header__display"></div>
+                <div class="coffee-header__details"></div>
+              </div>
+              <div class="coffee-medium">
+                <div class="coffe-medium__exit"></div>
+                <div class="coffee-medium__arm"></div>
+                <div class="coffee-medium__liquid"></div>
+                <div class="coffee-medium__smoke coffee-medium__smoke-one"></div>
+                <div class="coffee-medium__smoke coffee-medium__smoke-two"></div>
+                <div class="coffee-medium__smoke coffee-medium__smoke-three"></div>
+                <div class="coffee-medium__smoke coffee-medium__smoke-for"></div>
+                <div class="coffee-medium__cup"></div>
+              </div>
+              <div class="coffee-footer"></div>
+          </div>
+       </div>
+    <script src="./assets/js/models/classes.js"></script>
+    <script src="./assets/js/controllers/controler.js"></script>
+    <section></section>
+  </body>
+</html>
